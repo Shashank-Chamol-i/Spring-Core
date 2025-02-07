@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans 
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/util 
+           https://www.springframework.org/schema/util/spring-util.xsd">
+           
+          <util:map map-class ="java.util.HashMap" id = "fee">
+          <entry key = "BCA" value ="48500"/>
+          <entry key ="Btech" value ="150000"/>
+          <entry key = "BBA" value ="34000"/>
+          <entry key = "MCA" value= "800000"/>
+          </util:map>
+           
+           <bean class ="com.springcore.mapcollection.University" name ="course">
+           <property name="course" ref = "fee"/>
+           </bean>
+
+</beans>

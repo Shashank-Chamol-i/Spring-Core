@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans 
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/util 
+           https://www.springframework.org/schema/util/spring-util.xsd">
+           
+           <util:list list-class = "java.util.LinkedList" id ="myassest">
+           <value>Knowledge</value>
+           <value>Money</value>
+           <value>Love</value>
+           <value>InnerBelief</value>
+           </util:list>
+           
+           <bean class ="com.springcore.listcollection.Person" name ="assest">
+           <property name="assest" ref = "myassest"/>
+           </bean>
+
+</beans>
